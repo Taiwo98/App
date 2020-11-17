@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 2000;
+const PORT = process.env.PORT || 2000;
 
 app.use('/public',(express.static(path.join(__dirname, 'static'))));
 app.get('/',(req,res)=>{
@@ -11,4 +11,4 @@ app.get('/',(req,res)=>{
 
 
 
-app.listen(port);
+app.listen(PORT);
